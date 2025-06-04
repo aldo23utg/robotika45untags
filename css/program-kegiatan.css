@@ -1,0 +1,27 @@
+/* Program Kegiatan Page Specific Styles */
+.program-card {
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0; /* Tambahkan border jika belum ada bayangan yang cukup */
+}
+.program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,.12)!important;
+}
+.program-card-img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.program-card .card-title {
+    font-weight: 600;
+    color: #0B4C8C; /* Pastikan warna judul konsisten */
+}
+
+/* Responsive for program-kegiatan.html specific elements */
+@media (max-width: 767.98px) {
+    .program-card-img {
+        height: 180px;
+    }
+}

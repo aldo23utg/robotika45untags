@@ -1,0 +1,356 @@
+/* Import Google Fonts (jika belum di HTML via <link>) */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); */
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px; /* Sesuaikan dengan tinggi navbar fixed-top */
+    color: #333;
+    background-color: #FFFFFF;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #FFFFFF !important;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-brand {
+    color: #0B4C8C !important;
+    font-weight: 700;
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover img {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.nav-link { /* Untuk link utama, bukan dropdown toggle icon */
+    color: #1F2937 !important;
+    font-weight: 400;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 0.5rem 0.75rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0B4C8C;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0B4C8C !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 70%;
+}
+
+/* Navbar Styling - Penyesuaian untuk ikon dropdown */
+.navbar .nav-item.dropdown .dropdown-toggle {
+    display: flex; 
+    align-items: center;
+    padding: 0.5rem 0.75rem; /* Samakan padding dengan nav-link lain */
+}
+
+.navbar .nav-item.dropdown .dropdown-toggle i.fa-bars {
+    font-size: 1.25rem; /* Membuat ikon sedikit lebih besar */
+    color: #1F2937; /* Warna ikon default */
+    transition: color 0.3s ease;
+    line-height: 1; /* Pastikan ikon tidak menambah tinggi yang tidak perlu */
+}
+
+.navbar .nav-item.dropdown .dropdown-toggle:hover i.fa-bars,
+.navbar .nav-item.dropdown .dropdown-toggle.active i.fa-bars {
+    color: #0B4C8C; /* Warna ikon saat hover atau aktif */
+}
+
+/* Styling Dropdown Menu dan Animasi */
+.dropdown-menu {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+    border: 1px solid #e0e0e0;
+    margin-top: 0.125rem; 
+}
+
+@media (min-width: 992px) { /* Hanya untuk Desktop - Hover Dropdown & Animasi */
+    .navbar .nav-item.dropdown .dropdown-menu {
+        display: block; 
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out, visibility 0.25s ease-in-out;
+        pointer-events: none; 
+        min-width: 200px; 
+    }
+
+    .navbar .nav-item.dropdown .dropdown-menu.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
+.dropdown-item {
+    font-weight: 400;
+    color: #1F2937;
+    padding: 0.6rem 1.2rem; 
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #f0f0f0; 
+    color: #0B4C8C;
+}
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #0B4C8C;
+    color: #FFFFFF !important;
+}
+
+/* General Button Styling */
+.btn-primary {
+    background-color: #0B4C8C;
+    border-color: #0B4C8C;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+    background-color: #083A6B;
+    border-color: #083A6B;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.btn-outline-light {
+    padding: 12px 30px;
+    font-weight: 600;
+    border-width: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(255,255,255,0.1);
+}
+
+.btn-outline-light:hover {
+    background-color: #FFFFFF;
+    color: #0B4C8C !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(255,255,255,0.2);
+}
+
+.btn-outline-primary {
+    color: #0B4C8C;
+    border-color: #0B4C8C;
+    font-weight: 600;
+    border-width: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+.btn-outline-primary:hover {
+    background-color: #0B4C8C;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Section Titles */
+.section-title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #0B4C8C;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.75rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3B82F6;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-weight: 600;
+    color: #0B4C8C;
+    margin-bottom: 1rem;
+}
+
+/* Page Header (untuk halaman selain Beranda) */
+.page-header {
+    background: linear-gradient(135deg, #0B4C8C 0%, #3B82F6 100%);
+    padding: 70px 0;
+    margin-bottom: 0px;
+    color: #FFFFFF;
+}
+.page-header h1 {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+.page-header .lead {
+    color: #e0e0e0;
+    font-weight: 300;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #111827;
+    color: #FFFFFF !important;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+footer h5 { /* Untuk "Tautan Cepat", "Hubungi Kami" */
+    color: #FFFFFF !important;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+footer h5.text-primary { /* Untuk "Robotika'45 UNTAG SBY" jika kelas .text-primary masih ada di HTML */
+    color: #FFFFFF !important; /* Pastikan override */
+}
+
+footer .footer-link {
+    color: #FFFFFF !important;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
+}
+footer .footer-link:hover {
+    color: #FFFFFF; /* Tetap putih, efek padding tetap */
+    padding-left: 5px;
+    text-decoration: none;
+}
+footer .fab {
+    font-size: 1.6rem;
+    color: #FFFFFF !important;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+footer .fab:hover {
+    color: #FFFFFF; /* Tetap putih, efek transform tetap */
+    transform: scale(1.25) translateY(-2px);
+}
+footer hr {
+    border-color: #374151;
+}
+footer .small {
+    color: #FFFFFF !important;
+}
+#currentYear, #currentYearPage {
+    color: #FFFFFF !important;
+}
+
+/* Utility Classes */
+.text-primary {
+    color: #0B4C8C !important;
+}
+.bg-primary {
+    background-color: #0B4C8C !important;
+}
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Responsiveness (Global parts) */
+@media (max-width: 991.98px) { /* Tablet dan di bawahnya */
+    .navbar-nav .nav-link,
+    .navbar .nav-item.dropdown .dropdown-toggle { /* Terapkan juga pada dropdown toggle */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 15px;
+        border-bottom: 1px solid #f0f0f0;
+        width: 100%; /* Agar border bottom penuh */
+        justify-content: space-between; /* Untuk align ikon di toggle jika ada teks tambahan */
+    }
+    .navbar-nav .nav-item:last-child .nav-link,
+    .navbar-nav .nav-item.dropdown:last-child .dropdown-toggle { /* Hapus border untuk item terakhir */
+        border-bottom: none;
+    }
+    .nav-link::after {
+        display: none; /* Sembunyikan underline di mobile */
+    }
+
+    .dropdown-menu { /* Perilaku dropdown di mobile */
+        width: 100%;
+        text-align: left; /* Sesuaikan jika ingin rata kiri */
+        margin-top: 0; 
+        opacity: 1; /* Pastikan terlihat */
+        visibility: visible;
+        transform: none;
+        transition: none;
+        pointer-events: auto; 
+        box-shadow: none; /* Hapus shadow jika menempel */
+        border-top: 1px solid #e0e0e0; /* Garis pemisah dari toggle */
+        border-radius: 0;
+    }
+    .dropdown-item {
+        padding: 0.75rem 1.5rem; /* Padding untuk mobile */
+        border-bottom: 1px solid #f0f0f0; /* Pemisah antar item */
+    }
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+    .dropdown-divider {
+        margin: 0;
+    }
+
+    .page-header {
+        padding: 50px 0;
+    }
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    .page-header .lead {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 767.98px) { /* Mobile phones */
+    body {
+        padding-top: 60px; 
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+    .section-title::after {
+        width: 60px;
+        height: 3px;
+    }
+    .page-header {
+        padding: 40px 0;
+    }
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    .page-header .lead {
+        font-size: 1rem;
+    }
+    footer .fab {
+        font-size: 1.4rem;
+        margin: 0 0.3rem;
+    }
+    footer .col-md-4 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    footer .col-md-4:last-child {
+        margin-bottom: 0;
+    }
+}

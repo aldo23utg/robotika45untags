@@ -1,0 +1,103 @@
+/* Hero Section Styling (index.html) */
+.hero-section {
+    background:
+        linear-gradient(135deg, rgba(11, 76, 140, 0.85) 0%, rgba(59, 130, 246, 0.75) 100%),
+        url('../img/hero_bg.jpg') no-repeat center center; /* Pastikan path ini benar dari folder css */
+    background-size: cover;
+    background-attachment: fixed;
+    height: 90vh;
+    min-height: 550px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-section .lead {
+    font-size: 1.4rem;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* About Preview Section (index.html) */
+#about-preview img {
+    max-width: 100%;
+    border: 8px solid #FFFFFF;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-radius: 8px;
+}
+
+/* Key Features Section (index.html) */
+#key-features .feature-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#key-features .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(59, 130, 246, 0.2) !important;
+}
+#key-features .feature-card i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+#key-features .feature-card:hover i {
+    transform: scale(1.2) rotate(5deg);
+    color: #3B82F6;
+}
+
+/* Call to Action Section (index.html) */
+#cta {
+    background: linear-gradient(135deg, #0B4C8C 0%, #3B82F6 100%); /* Gradasi biru */
+    color: #FFFFFF; /* Pastikan teks putih, juga diatur di HTML */
+}
+#cta h2 {
+    color: #FFFFFF; /* Pastikan judul putih */
+}
+#cta .btn-light { /* Tombol di CTA */
+    font-weight: 600;
+    color: #0B4C8C; /* Teks tombol saat normal */
+    padding: 12px 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+#cta .btn-light:hover {
+    background-color: #f0f0f0; /* Sedikit lebih gelap saat hover */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive for index.html specific elements */
+@media (max-width: 991.98px) { /* Tablet dan di bawahnya */
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+    .hero-section .lead {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767.98px) { /* Mobile phones */
+    .hero-section {
+        height: auto;
+        min-height: 450px;
+        padding: 60px 20px;
+        background-attachment: scroll; /* Matikan parallax di mobile jika berat */
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section .lead {
+        font-size: 1.05rem;
+        max-width: 90%;
+    }
+    .hero-section .btn-lg { /* Bootstrap class .btn-lg used in hero buttons */
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+}   

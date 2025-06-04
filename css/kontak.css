@@ -1,0 +1,47 @@
+/* Kontak Page Specific Styles */
+.contact-info-card {
+    border-left: 4px solid #0B4C8C;
+    border-radius: 8px;
+    background-color: #f8f9fa; /* Latar belakang sedikit berbeda */
+    padding: 1.5rem;
+}
+.contact-info-card p {
+    margin-bottom: 1rem;
+}
+.contact-info-card i.fa-fw {
+    width: 1.5em; /* Ruang lebih untuk ikon */
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 50%; /* Rasio aspek 2:1, sesuaikan jika perlu */
+    position: relative;
+    height: 0;
+    border-radius: 8px;
+    border: 1px solid #ddd; /* Tambah border tipis pada peta */
+}
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#contactForm .form-control {
+    border-radius: 0.375rem; /* Bootstrap default, pastikan konsisten */
+}
+#contactForm .form-control:focus {
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+}
+#gabung.bg-light { /* Section "Ingin Bergabung" */
+    border-radius: 0.5rem; /* Memberi sedikit radius jika diinginkan */
+}
+
+/* Responsive for kontak.html specific elements */
+@media (max-width: 767.98px) {
+    .map-responsive {
+        padding-bottom: 75%; /* Sesuaikan rasio aspek peta untuk mobile jika perlu */
+    }
+}

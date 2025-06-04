@@ -7,16 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/galeri.css">
     <link rel="icon" href="assets/logoukm.jpg" type="image/jpeg">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="index.html">
-    <img src="assets/logoukm.jpg" alt="Logo UKM Robotika'45" height="60" class="d-inline-block align-middle me-2">
-    Robotika'45
-</a>
+                <img src="assets/logoukm.jpg" alt="Logo UKM Robotika'45" height="45" class="d-inline-block align-middle me-2">
+                Robotika'45
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,12 +26,11 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link" href="struktur-organisasi.html">Struktur Organisasi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="program-kegiatan.html">Program & Kegiatan</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMediaInfo" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Media & Info
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMediaInfo">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-bars"></i> </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenu">
+                            <li><a class="dropdown-item" href="program-kegiatan.html">Program & Kegiatan</a></li>
                             <li><a class="dropdown-item" href="galeri.html">Galeri</a></li>
                             <li><a class="dropdown-item" href="berita.html">Berita</a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -53,7 +53,7 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="gallery-container">
             <div class="col" data-aos="zoom-in">
                 <div class="card gallery-card shadow-sm">
-                    <a href="img/gallery/full/kegiatan_besar_1.jpg" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_1.jpg" data-bs-title="Suasana Kompetisi Robot Nasional">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_1.jpg" data-bs-title="Suasana Kompetisi Robot Nasional">
                         <img src="img/gallery/thumb/kegiatan_thumb_1.jpg" class="card-img-top" alt="Kegiatan 1 Robotika'45">
                     </a>
                     <div class="card-body py-2">
@@ -63,7 +63,7 @@
             </div>
             <div class="col" data-aos="zoom-in" data-aos-delay="50">
                 <div class="card gallery-card shadow-sm">
-                     <a href="img/gallery/full/kegiatan_besar_2.jpg" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_2.jpg" data-bs-title="Workshop Mikrokontroler">
+                     <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_2.jpg" data-bs-title="Workshop Mikrokontroler">
                         <img src="img/gallery/thumb/kegiatan_thumb_2.jpg" class="card-img-top" alt="Kegiatan 2 Robotika'45">
                     </a>
                     <div class="card-body py-2">
@@ -73,7 +73,7 @@
             </div>
             <div class="col" data-aos="zoom-in" data-aos-delay="100">
                 <div class="card gallery-card shadow-sm">
-                    <a href="img/gallery/full/kegiatan_besar_3.jpg" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_3.jpg" data-bs-title="Pameran Teknologi Kampus">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_3.jpg" data-bs-title="Pameran Teknologi Kampus">
                         <img src="img/gallery/thumb/kegiatan_thumb_3.jpg" class="card-img-top" alt="Kegiatan 3 Robotika'45">
                     </a>
                     <div class="card-body py-2">
@@ -83,7 +83,7 @@
             </div>
             <div class="col" data-aos="zoom-in" data-aos-delay="150">
                 <div class="card gallery-card shadow-sm">
-                    <a href="img/gallery/full/kegiatan_besar_4.jpg" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_4.jpg" data-bs-title="Tim Robotika'45 Bersiap">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_4.jpg" data-bs-title="Tim Robotika'45 Bersiap">
                         <img src="img/gallery/thumb/kegiatan_thumb_4.jpg" class="card-img-top" alt="Kegiatan 4 Robotika'45">
                     </a>
                     <div class="card-body py-2">
@@ -93,7 +93,7 @@
             </div>
             <div class="col" data-aos="zoom-in" data-aos-delay="200">
                 <div class="card gallery-card shadow-sm">
-                    <a href="img/gallery/full/kegiatan_besar_5.jpg" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_5.jpg" data-bs-title="Pengembangan Prototipe Robot">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_5.jpg" data-bs-title="Pengembangan Prototipe Robot">
                         <img src="img/gallery/thumb/kegiatan_thumb_5.jpg" class="card-img-top" alt="Kegiatan 5 Robotika'45">
                     </a>
                     <div class="card-body py-2">
@@ -103,7 +103,7 @@
             </div>
             <div class="col" data-aos="zoom-in" data-aos-delay="250">
                 <div class="card gallery-card shadow-sm">
-                    <a href="img/gallery/full/kegiatan_besar_6.jpg" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_6.jpg" data-bs-title="Kunjungan ke Industri Robotika">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_6.jpg" data-bs-title="Kunjungan ke Industri Robotika">
                         <img src="img/gallery/thumb/kegiatan_thumb_6.jpg" class="card-img-top" alt="Kegiatan 6 Robotika'45">
                     </a>
                     <div class="card-body py-2">
@@ -113,7 +113,7 @@
             </div>
              <div class="col" data-aos="zoom-in" data-aos-delay="300">
                 <div class="card gallery-card shadow-sm">
-                    <a href="img/gallery/full/kegiatan_besar_7.jpg" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_7.jpg" data-bs-title="Kebersamaan Anggota UKM">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_7.jpg" data-bs-title="Kebersamaan Anggota UKM">
                         <img src="img/gallery/thumb/kegiatan_thumb_7.jpg" class="card-img-top" alt="Kegiatan 7 Robotika'45">
                     </a>
                     <div class="card-body py-2">
@@ -123,7 +123,7 @@
             </div>
              <div class="col" data-aos="zoom-in" data-aos-delay="350">
                 <div class="card gallery-card shadow-sm">
-                    <a href="img/gallery/full/kegiatan_besar_8.jpg" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_8.jpg" data-bs-title="Presentasi Proyek Robot">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/gallery/full/kegiatan_besar_8.jpg" data-bs-title="Presentasi Proyek Robot">
                         <img src="img/gallery/thumb/kegiatan_thumb_8.jpg" class="card-img-top" alt="Kegiatan 8 Robotika'45">
                     </a>
                     <div class="card-body py-2">
@@ -137,7 +137,7 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content bg-transparent border-0">
                     <div class="modal-header border-0">
-                         <h5 class="modal-title text-white" id="imageModalLabel">Nama Gambar</h5>
+                         <h5 class="modal-title" id="imageModalLabel">Nama Gambar</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body p-0">
@@ -148,34 +148,34 @@
         </div>
     </main>
 
-    <footer class="py-4 bg-dark text-white">
+    <footer class="py-4 text-white">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-3 mb-md-0">
-                    <h5 class="text-primary">Robotika'45 UNTAG SBY</h5>
+                    <h5>Robotika'45 UNTAG SBY</h5>
                     <p class="small">Jl. Semolowaru No. 45, Menur Pumpungan, Sukolilo, Surabaya, Jawa Timur 60118</p>
                 </div>
                 <div class="col-md-4 mb-3 mb-md-0">
                     <h5>Tautan Cepat</h5>
                     <ul class="list-unstyled small">
-                        <li><a href="index.html" class="text-white text-decoration-none footer-link">Beranda</a></li>
-                        <li><a href="tentang-kami.html" class="text-white text-decoration-none footer-link">Tentang Kami</a></li>
-                        <li><a href="program-kegiatan.html" class="text-white text-decoration-none footer-link">Program</a></li>
-                        <li><a href="berita.html" class="text-white text-decoration-none footer-link">Berita</a></li>
-                        <li><a href="kontak.html" class="text-white text-decoration-none footer-link">Kontak</a></li>
+                        <li><a href="index.html" class="footer-link">Beranda</a></li>
+                        <li><a href="tentang-kami.html" class="footer-link">Tentang Kami</a></li>
+                        <li><a href="program-kegiatan.html" class="footer-link">Program</a></li>
+                        <li><a href="berita.html" class="footer-link">Berita</a></li>
+                        <li><a href="kontak.html" class="footer-link">Kontak</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>Hubungi Kami</h5>
                     <p class="small">Email: robotika45@untag-sby.ac.id <br> Instagram: @robotika45untag</p>
                     <div>
-                        <a href="https://instagram.com/robotika45untag" target="_blank" class="text-white me-2"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-youtube fa-lg"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-tiktok fa-lg"></i></a>
+                        <a href="https://instagram.com/robotika45untag" target="_blank" class="me-2"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#"><i class="fab fa-tiktok fa-lg"></i></a>
                     </div>
                 </div>
             </div>
-            <hr class="my-3 bg-secondary">
+            <hr class="my-3">
             <div class="text-center small">
                 © <span id="currentYearPage"></span> UKM Robotika'45 UNTAG Surabaya. All Rights Reserved.
             </div>
@@ -185,6 +185,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/galeri.js"></script>
 </body>
 </html>

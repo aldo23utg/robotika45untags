@@ -1,0 +1,49 @@
+/* Galeri Page Specific Styles */
+.gallery-card {
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e0e0e0; /* Border tipis untuk kartu */
+}
+.gallery-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15)!important;
+}
+.gallery-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Modal styles specific to gallery */
+#imageModal .modal-content { /* Target modal content via ID #imageModal */
+    background-color: rgba(0,0,0,0.85) !important; /* Latar belakang modal lebih gelap */
+    border: none;
+}
+#imageModal .modal-header { /* Target modal header via ID #imageModal */
+    border-bottom: none; /* Hapus border header modal */
+}
+#imageModal .modal-header .btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.9;
+}
+#imageModal .modal-header .btn-close-white:hover {
+    opacity: 1;
+}
+#imageModalLabel.modal-title { /* Target modal title via ID */
+    color: #fff !important;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+#imageModal .modal-dialog.modal-lg { /* Ukuran modal large untuk galeri */
+    max-width: 900px;
+}
+
+/* Responsive for galeri.html specific elements */
+@media (max-width: 767.98px) {
+    .gallery-card img {
+        height: 180px;
+    }
+}

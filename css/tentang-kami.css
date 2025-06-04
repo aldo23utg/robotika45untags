@@ -1,0 +1,27 @@
+/* Tentang Kami Page Specific Styles */
+.benefit-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0.75rem 1.5rem rgba(59, 130, 246, 0.15) !important;
+}
+.benefit-card i {
+    transition: transform 0.3s ease;
+}
+.benefit-card:hover i {
+    transform: scale(1.1);
+}
+
+#sejarah img {
+    border: 6px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Tambah shadow pada gambar sejarah */
+    border-radius: 8px; /* Sedikit radius pada gambar sejarah */
+    max-width: 100%; /* Pastikan responsif */
+}
+
+#visi-misi ul i.fa-check-circle { /* Pastikan ikon di visi-misi punya margin jika diperlukan */
+    margin-right: 0.5rem; /* Contoh margin */
+}
